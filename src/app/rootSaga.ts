@@ -1,21 +1,18 @@
 import counterSaga from "features/counter/counterSaga";
 import { all } from "@redux-saga/core/effects";
-
-
-// mỗi feature là 1 saga, ví dụ counter có counter saga
-// mỗi saga là 1 generator function
-function* helloSaga() {
-  console.log("hello saga")
-}
-
+import { authSaga } from "features/auth/authSaga";
+import dashboardSaga from "features/dashboard/dashboardSaga";
+import studentSaga from "features/student/studentSaga";
 
 
 // khi store đc khởi tạo lên thì nó sẽ chạy root saga
 // root saga nó sẽ kích hoạt chạy 1 loạt các saga con
 export default function* rootSaga() {
   console.log("root saga");
-  yield all([helloSaga(), counterSaga()]);
+  yield all([
+    counterSaga(),
+    authSaga(),
+    dashboardSaga(),
+    studentSaga(),
+  ]);
 }
-
-// khi mình dispatch 1 action từ component lên redux store thì nó 
-// phải qua các middleware trc rồi mới vào dispatcher
