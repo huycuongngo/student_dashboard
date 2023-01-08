@@ -7,19 +7,19 @@ const studentApi = {
     const url = '/students';
     return axiosClient.get(url, { params });
   },
-  getStudentById(id: String): Promise<Student> {
+  getStudentById(id: string): Promise<Student> {
     const url = `/students/${id}`;
     return axiosClient.get(url);
   },
-  addNewStudent(payload: Student): Promise<Student> {
+  addNewStudent(data: Student): Promise<Student> {
     const url = '/students';
-    return axiosClient.post(url, { payload });
+    return axiosClient.post(url, data);
   },
-  updateStudent(id: String, payload: Student): Promise<Student> {
-    const url = `/students/${id}`;
-    return axiosClient.patch(url, { payload });
+  updateStudent(data: Partial<Student>): Promise<Student> {
+    const url = `/students/${data.id}`;
+    return axiosClient.patch(url, data);
   },
-  deleteStudent(id: String): Promise<any> {
+  deleteStudent(id: string): Promise<any> {
     const url = `/students/${id}`;
     return axiosClient.delete(url);
   },

@@ -2,7 +2,7 @@ import { ListResponse } from './../../model/common';
 import  studentApi  from 'api/studentApi';
 import { PayloadAction } from '@reduxjs/toolkit';
 import { studentActions } from './studentSlice';
-import { takeLatest, call, put } from '@redux-saga/core/effects';
+import { takeLatest, call, put, debounce } from '@redux-saga/core/effects';
 import { ListParams, Student } from 'model';
 
 function* fetchStudentList(action: PayloadAction<ListParams>) {  
@@ -18,9 +18,15 @@ function* fetchStudentList(action: PayloadAction<ListParams>) {
   }
 }
 
+function* handleSearchDebouce(action: PayloadAction<ListParams>) {
+  // console.log("student search debouce", action.payload)
+  yield put(studentActions.setFilter(action.payload))
+}
+
 
 export default function* studentSaga() {
   //watch action
   yield takeLatest(studentActions.fetchStudentList, fetchStudentList)
 
+  yield debounce(500, studentActions.setFilterWithDebouce.type, handleSearchDebouce);
 }

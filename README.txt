@@ -113,10 +113,42 @@ lấy filter hiện tại, khi bấm số trang thay đổi thì phải đi cậ
 
 //next, lesson 32: format cột gender và mark dựa vào material ui
 
-//next, lesson 33: lấy tên thành phố hiển thị lên cột city
+//next, lesson 33: lấy tên thành phố hiển thị lên column city
+đi lấy dữ liệu và lưu lên trên redux
 
+//next, lesson 34: chức năng search student by name
+khi filter thay đổi thì báo lên parent: listStudent
+redux saga có hỗ trợ debouce
 
+//next, lesson 35: city filter
+thay đổi city ở component con thì báo cho parent
+nếu API làm thay đổi số lượng item trong table thì phải reset page = 1
 
+//next, lesson 36: sort student and clear filter
+khi gọi API cần truyền 2 giá trị: sort và order
 
+//next, lesson 37: delete student
+call api 1 delete student
+call api 2 fetchStudentList again
+
+//next, lesson 38: add/edit student
+mặc dù đường dẫn có thể bị trùng, và ta dựa vào biến trên đường dẫn để xác định mode add or edit
+
+//next, lesson 39: tổ chức form module hiệu quả lý thuyết
+React Hook Form (Formilk, Redux form), validate Yup
+
+//next, lesson 40: react hook form library lý thuyết
+
+//next, lesson 41: tạo form đầu tiên có các text field
+
+//next, lesson 42: tạo form có radio group
+
+//next, lesson 43: tạo form có selected group
+
+//next, lesson 44: validate using yup
+
+//next, lesson 45: submit form có loading và error
+
+/next, lesson 46: show thông báo react-toastify
 
 

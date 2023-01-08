@@ -22,7 +22,7 @@ function* handleIncrementSaga(action: PayloadAction<number>) {
 }
 
 export default function* counterSaga() {
-  console.log('hello counterSaga');
+  // console.log('hello counterSaga');
 
   // tôi muốn lắng nghe tất cả các action
   // mình có thể chỉ định một action cụ thể đã khai báo trong slice rồi
