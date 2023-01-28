@@ -130,7 +130,7 @@ export default function StudentFilters({ filter, cityList, onChange, onSearchCha
             <InputLabel id="sortBy">Sort by</InputLabel>
             <Select
               labelId="sortBy"
-              value={filter.sort ? `${filter._sort}.${filter._order}` : ''}
+              value={filter._sort ? `${filter._sort}.${filter._order}` : ''}
               onChange={handleSortChange}
               autoWidth
               label="Sort by"
@@ -141,7 +141,7 @@ export default function StudentFilters({ filter, cityList, onChange, onSearchCha
               <MenuItem value="name.asc">Name ASC</MenuItem>
               <MenuItem value="name.desc">Name DESC</MenuItem>
               <MenuItem value="mark.asc">Mark ASC</MenuItem>
-              <MenuItem value="mark.desc">Mark ASC</MenuItem>
+              <MenuItem value="mark.desc">Mark DESC</MenuItem>
             </Select>
           </FormControl>
         </Grid>

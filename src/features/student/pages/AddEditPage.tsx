@@ -31,7 +31,7 @@ export default function AddEditPage() {
   const handleStudentFormSubmit = async (formValues: Student) => {
     if (isEdit) {
       await studentApi.updateStudent(formValues)
-      toast.success('Save student successfully')
+      toast.success('Update student successfully')
 
     } else {
       await studentApi.addNewStudent(formValues)

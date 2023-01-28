@@ -86,7 +86,7 @@ export default function StudentForm({ initialValue, onSubmit }: StudentFormProps
 
         <Box mt={3}>
           <Button type='submit' variant='contained' color='primary' disabled={isSubmitting}>
-            { isSubmitting && <CircularProgress size={16} />}&nbsp;Save
+            { isSubmitting && <CircularProgress size={16} />}&nbsp;Submit
           </Button>
         </Box>
       </form>

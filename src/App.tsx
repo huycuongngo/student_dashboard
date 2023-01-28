@@ -11,8 +11,8 @@ function App() {
         <Route path='/login' element={<LoginPage />} />
 
         <Route path='/admin/*' element={<PrivateRoute><AdminLayout /></PrivateRoute> }/>
-  
-        <Route path='*' element={<NotFound />} />
+{/*   
+        <Route path='*' element={<NotFound />} /> */}
       </Routes>
     </div>
   );
